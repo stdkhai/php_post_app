@@ -24,7 +24,6 @@ Auth::routes();
 Route::middleware(['auth'])->group(function () {
     Route::get('/parcels', 'App\Http\Controllers\ParcelController@index')->name('parcels.index');
     Route::get('/admin/dashboard', 'App\Http\Controllers\AdminDashboardController@dashboard')->name('admin.dashboard');
-    Route::get('/admin/parcels', [AdminController::class, 'parcels'])->name('admin.parcels');
 });
 
 
@@ -41,15 +40,11 @@ Route::prefix('admin')->middleware('auth')->group(function () {
 });
 
 Route::prefix('admin')->middleware('auth')->group(function () {
-    Route::get('/admin/parcels', [ParcelController::class, 'index'])->name('admin.parcels.index');
-    Route::get('/admin/parcels/create', [ParcelController::class, 'create'])->name('admin.parcels.create');
-    Route::post('/admin/parcels', [ParcelController::class, 'store'])->name('admin.parcels.store');
-    Route::get('/admin/parcels/{parcel}', [ParcelController::class, 'show'])->name('admin.parcels.show');
-    Route::get('/admin/parcels/{parcel}/edit', [ParcelController::class, 'edit'])->name('admin.parcels.edit');
-    Route::put('/admin/parcels/{parcel}', [ParcelController::class, 'update'])->name('admin.parcels.update');
-    Route::delete('/admin/parcels/{parcel}', [ParcelController::class, 'destroy'])->name('admin.parcels.destroy');
+    Route::get('/parcels', [AdminParcelController::class, 'index'])->name('admin.parcels.index');
+    Route::get('/parcels/create', [AdminParcelController::class, 'create'])->name('admin.parcels.create');
+    Route::post('/parcels', [AdminParcelController::class, 'store'])->name('admin.parcels.store');
+    Route::get('/parcels/{parcel}', [AdminParcelController::class, 'show'])->name('admin.parcels.show');
+    Route::get('/parcels/{parcel}/edit', [AdminParcelController::class, 'edit'])->name('admin.parcels.edit');
+    Route::post('/parcels/{parcel}', [AdminParcelController::class, 'update'])->name('admin.parcels.update');
+    Route::delete('/parcels/{parcel}', [AdminParcelController::class, 'destroy'])->name('admin.parcels.destroy');
 });
-
-
-
-//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

@@ -8,10 +8,20 @@ class Parcel extends Model
 {
     protected $fillable = [
         'sender',
-        'receiver',
+        'reciever',
         'description',
         'location',
         'from_address',
         'to_address'
     ];
+
+    public function sender()
+    {
+        return $this->belongsTo(User::class, 'id');
+    }
+
+    public function reciever()
+    {
+        return $this->belongsTo(User::class, 'id');
+    }
 }

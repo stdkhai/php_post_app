@@ -8,5 +8,5 @@
 <p>Всього посилок: {{ $parcelsCount }}</p>
 
 <a href="{{ route('admin.users') }}">Переглянути всіх користувачів</a>
-<a href="{{ route('admin.parcels') }}">Переглянути всі посилки</a>
+<a href="{{ route('admin.parcels.index') }}">Переглянути всі посилки</a>
 @endsection
