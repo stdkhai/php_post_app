@@ -27,6 +27,7 @@ Route::middleware(['auth'])->group(function () {
 
 });
 
+
 // routes/web.php
 
 Route::prefix('admin')->middleware('auth')->group(function () {
@@ -38,7 +39,4 @@ Route::prefix('admin')->middleware('auth')->group(function () {
     Route::post('/users/{user}/promote', [AdminUserController::class, 'promote'])->name('admin.users.promote');
     Route::post('/users/{user}/demote', [AdminUserController::class, 'demote'])->name('admin.users.demote');
 });
-
-
-//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
