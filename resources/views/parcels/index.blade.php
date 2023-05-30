@@ -4,7 +4,7 @@
 
 <div class="container">
     <h1>My Parcels</h1>
-    <table>
+    <table class="table table-striped table-light">
         <thead>
             <tr>
                 <th>ID</th>

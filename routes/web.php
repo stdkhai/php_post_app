@@ -27,6 +27,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/admin/parcels', [AdminController::class, 'parcels'])->name('admin.parcels');
 });
 
+
 // routes/web.php
 
 Route::prefix('admin')->middleware('auth')->group(function () {
