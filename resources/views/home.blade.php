@@ -9,12 +9,15 @@
 
                 <div class="card-body">
                     @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
+                    <div class="alert alert-success" role="alert">
+                        {{ session('status') }}
+                    </div>
                     @endif
-
-                    {{ __('You are logged in!') }}
+                    Welcome
+                    {{ __('Hello Men You are logged in!') }}
+                    @foreach ($parcels as $parcel)
+                    <p>{{ $parcel->description }}</p>
+                    @endforeach
                 </div>
             </div>
         </div>
