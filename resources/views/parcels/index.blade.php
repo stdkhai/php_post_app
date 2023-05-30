@@ -22,28 +22,26 @@
                 <td>{{ $parcel->receiver }}</td>
                 <td>{{ $parcel->description }}</td>
                 <td>
-                    <button class="btn btn-info" data-toggle="modal" data-target="#parcelModal{{ $parcel->id }}">Детальніше</button>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+                        Open Modal
+                    </button>
                 </td>
             </tr>
 
             <!-- Modal -->
-            <div class="modal fade" id="parcelModal{{ $parcel->id }}" tabindex="-1" role="dialog" aria-labelledby="parcelModalLabel{{ $parcel->id }}" aria-hidden="true">
-                <div class="modal-dialog" role="document">
+            <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="parcelModalLabel{{ $parcel->id }}">Детальна інформація про посилку #{{ $parcel->id }}</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
+                            <h5 class="modal-title" id="exampleModalLabel">Modal Title</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <p>Sender: {{ $parcel->sender }}</p>
-                            <p>Receiver: {{ $parcel->receiver }}</p>
-                            <p>Description: {{ $parcel->description }}</p>
-                            <!-- Додайте додаткову інформацію, якщо необхідно -->
+                            <p>This is the modal body.</p>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрити</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
                         </div>
                     </div>
                 </div>

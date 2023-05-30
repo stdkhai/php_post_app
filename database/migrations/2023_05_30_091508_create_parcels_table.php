@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('parcels', function (Blueprint $table) {
             $table->id();
-            $table->id('sender');
-            $table->id('reciever');
+            $table->bigInteger('sender');
+            $table->bigInteger('reciever');
             $table ->string('description');
             $table ->string('location');
             $table ->string('from_address');

@@ -19,8 +19,13 @@ Route::get('/', function () {
 });
 
 Auth::routes();
+
 Route::middleware(['auth'])->group(function () {
     Route::get('/parcels', 'App\Http\Controllers\ParcelController@index')->name('parcels.index');
+    Route::get('/admin/dashboard', 'App\Http\Controllers\AdminDashboardController@dashboard')->name('admin.dashboard');
+    Route::get('/admin/users', [AdminController::class, 'users'])->name('admin.users');
+    Route::get('/admin/parcels', [AdminController::class, 'parcels'])->name('admin.parcels');
+
 });
 
 //Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
