@@ -11,11 +11,9 @@
         </div>
         <div class="d-flex flex-column align-items-center justify-content-center">
         <p>Всього посилок: {{ $parcelsCount }}</p>
-        <button class="btn btn-primary "><a href="{{ route('admin.parcels') }}" class="text-decoration-none" style="color:white">Переглянути всі посилки</a></button>
+        <button class="btn btn-primary "><a href="{{ route('admin.parcels.index') }}" class="text-decoration-none" style="color:white">Переглянути всі посилки</a></button>
         </div>
 </div>
-
-
 @endsection
 </div>
 

@@ -26,7 +26,7 @@
             @if (Route::has('login'))
                 <div class="d-flex justify-content-between align-items-center pt-4 p-12">
                         <a class="navbar-brand" href="{{ url('/') }}">
-                            <img src="../resources/img/logo.png" width="30" height="30" alt="">
+                            <img src="{{ asset('img/logo.png') }}" width="30" height="30" alt="">
                         </a>
                 <div>
                         @auth
@@ -51,19 +51,19 @@
                             <div class="swiper-wrapper">
                                 <!-- Slides -->
                                 <div class="swiper-slide">
-                                    <img src="../resources/img/slide-1.png" alt="">
+                                    <img src="{{ asset('img/slide-1.png') }}" alt="">
                                 </div>
                                 <div class="swiper-slide">
-                                <img src="../resources/img/slide-2.png" alt="">
+                                <img src="{{ asset('img/slide-2.png') }}" alt="">
                                 </div>
                                 <div class="swiper-slide">
-                                <img src="../resources/img/slide-3.png" width="full" alt="">
+                                <img src="{{ asset('img/slide-3.png') }}" width="full" alt="">
                                 </div>
                                 <div class="swiper-slide">
-                                <img src="../resources/img/slide-4.png" width="full" alt="">
+                                <img src="{{ asset('img/slide-4.png') }}" width="full" alt="">
                                 </div>
                                 <div class="swiper-slide">
-                                <img src="../resources/img/slide-5.png" width="full" alt="">
+                                <img src="{{ asset('img/slide-5.png') }}" width="full" alt="">
                                 </div>
                             </div>
                             <div class="swiper-pagination"></div>

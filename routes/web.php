@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\AdminUserController;
+use App\Http\Controllers\AdminParcelController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,8 +24,6 @@ Auth::routes();
 Route::middleware(['auth'])->group(function () {
     Route::get('/parcels', 'App\Http\Controllers\ParcelController@index')->name('parcels.index');
     Route::get('/admin/dashboard', 'App\Http\Controllers\AdminDashboardController@dashboard')->name('admin.dashboard');
-    Route::get('/admin/parcels', [AdminController::class, 'parcels'])->name('admin.parcels');
-
 });
 
 
@@ -40,3 +39,12 @@ Route::prefix('admin')->middleware('auth')->group(function () {
     Route::post('/users/{user}/demote', [AdminUserController::class, 'demote'])->name('admin.users.demote');
 });
 
+Route::prefix('admin')->middleware('auth')->group(function () {
+    Route::get('/parcels', [AdminParcelController::class, 'index'])->name('admin.parcels.index');
+    Route::get('/parcels/create', [AdminParcelController::class, 'create'])->name('admin.parcels.create');
+    Route::post('/parcels', [AdminParcelController::class, 'store'])->name('admin.parcels.store');
+    Route::get('/parcels/{parcel}', [AdminParcelController::class, 'show'])->name('admin.parcels.show');
+    Route::get('/parcels/{parcel}/edit', [AdminParcelController::class, 'edit'])->name('admin.parcels.edit');
+    Route::post('/parcels/{parcel}', [AdminParcelController::class, 'update'])->name('admin.parcels.update');
+    Route::delete('/parcels/{parcel}', [AdminParcelController::class, 'destroy'])->name('admin.parcels.destroy');
+});
