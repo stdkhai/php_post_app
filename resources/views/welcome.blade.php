@@ -28,7 +28,7 @@
                         <a class="navbar-brand" href="{{ url('/') }}">
                             <img src="../resources/img/logo.png" width="30" height="30" alt="">
                         </a>
-                        <div>
+                <div>
                         @auth
                         <a href="{{ url('/parcels') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">My orders</a>
                     @else
@@ -70,7 +70,114 @@
                         </div>
                         
             </div>
+            <div class="d-flex gap-12 justify-content-center pb-12 pt-5">
+                <div>
+                    <button class="d-flex gap-2 svg-cont button icon-link-hover-3 align-items-center">
+                    <svg id="CalcIconSvg" width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+		<rect id="CalcIconRectangle-2" fill="#FFFFFF" x="15" y="15" width="14" height="14"></rect>
+		<polygon id="CalcIconPath-1" fill="#99A2AA" fill-rule="nonzero" points="0 15.75 0 14.25 30 14.25 30 15.75"></polygon>
+		<g transform="translate(2.500000, 4.000000)">
+			<path id="CalcIconLine-1" d="M2.5,3.5 L8.5,3.5" stroke="#99A2AA" stroke-linecap="round" stroke-width="1.5"></path>
+			<path id="CalcIconLine-2" d="M5.5,0.5 L5.5,6.5" stroke="#99A2AA" stroke-linecap="round" stroke-width="1.5"></path>
+			<g transform="translate(5.500000, 18.500000) rotate(45.000000) translate(-5.500000, -18.500000) translate(2.000000, 15.000000)">
+				<path id="CalcIconLine-3" d="M0.5,3.5 L6.5,3.5" stroke="#99A2AA" stroke-linecap="round" stroke-width="1.5"></path>
+				<path id="CalcIconLine-4" d="M3.5,0.5 L3.5,6.5" stroke="#99A2AA" stroke-linecap="round" stroke-width="1.5"></path>
+			</g>
+		</g>
+		<path id="CalcIconRectangle-1" d="M1.5,1.5 L1.5,28.5 L28.5,28.5 L28.5,1.5 L1.5,1.5 Z M1,0 L29,0 C29.5522847,-1.01453063e-16 30,0.44771525 30,1 L30,29 C30,29.5522847 29.5522847,30 29,30 L1,30 C0.44771525,30 6.76353751e-17,29.5522847 0,29 L0,1 C-6.76353751e-17,0.44771525 0.44771525,1.01453063e-16 1,0 Z" fill="#99A2AA" fill-rule="nonzero"></path>
+		<polygon id="CalcIconPath-2" fill="#99A2AA" fill-rule="nonzero" points="14.25 0 15.75 0 15.75 30 14.25 30"></polygon>
+		<g transform="translate(18.500000, 6.000000)">
+			<path id="CalcIconLine-5" d="M0.5,1.5 L6.5,1.5" stroke="#99A2AA" stroke-linecap="round" stroke-width="1.5"></path>
+			<path id="CalcIconLine-6" d="M0.5,14.5 L6.5,14.5" stroke="#99A2AA" stroke-linecap="round" stroke-width="1.5"></path>
+			<path id="CalcIconLine-7" d="M0.5,18.5 L6.5,18.5" stroke="#99A2AA" stroke-linecap="round" stroke-width="1.5"></path>
+		</g>
+	</g>
+</svg>
+                    Розрахувати</button>
+                </div>
+                <div>
+                    <button class="d-flex gap-2 svg-cont button icon-link-hover-2 align-items-center">
+                    <svg id="ParcelIconSvg" width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <path id="ParcelIconPath-3" d="M2.257599,6.6287995 L15,13 L27.742401,6.6287995 C28.0387881,6.48060596 28.1589227,6.12020216 28.0107291,5.82381507 C27.9415401,5.6854369 27.821573,5.57913321 27.6758747,5.5270981 L15,1 L2.32412531,5.5270981 C2.01205951,5.63855017 1.84942995,5.98187924 1.96088203,6.29394504 C2.01291713,6.43964334 2.11922083,6.55961041 2.257599,6.6287995 Z" fill="#FFFFFF"></path>
+                        <path id="ParcelIconPath-1" d="M21.25,9.98099706 L8.74978609,4.24382599 C8.37332935,4.07104521 8.20821737,3.62580023 8.38099815,3.24934349 C8.55377893,2.87288675 8.99902391,2.70777476 9.37548065,2.88055554 L22.75,9.01900294 L22.75,15 C22.75,15.4142136 22.4142136,15.75 22,15.75 C21.5857864,15.75 21.25,15.4142136 21.25,15 L21.25,9.98099706 Z" fill="#99A2AA" fill-rule="nonzero"></path>
+                        <path id="ParcelIconRectangle" d="M2.5,8.27480852 L2.5,23.0109058 L15,28.3680486 L27.5,23.0109058 L27.5,8.27480852 L15.7878386,13.2943063 C15.284741,13.5099195 14.715259,13.5099195 14.2121614,13.2943063 L2.5,8.27480852 Z M1.69695965,6.29869699 L14.8030404,11.9155887 C14.9288147,11.969492 15.0711853,11.969492 15.1969596,11.9155887 L28.3030404,6.29869699 C28.5568552,6.18991918 28.8507947,6.30749497 28.9595725,6.56130986 C28.9862461,6.62354828 29,6.69055612 29,6.75826951 L29,23.6703019 C29,23.870316 28.8808016,24.051085 28.6969596,24.1298744 L15.1969596,29.9155887 C15.0711853,29.969492 14.9288147,29.969492 14.8030404,29.9155887 L1.30304035,24.1298744 C1.11919843,24.051085 1,23.870316 1,23.6703019 L1,6.75826951 C1,6.48212713 1.22385763,6.25826951 1.5,6.25826951 C1.56771339,6.25826951 1.63472123,6.27202338 1.69695965,6.29869699 Z" fill="#99A2AA" fill-rule="nonzero"></path>
+                        <path id="ParcelIconRectangle" d="M2.5,6.98909424 L2.5,23.0109058 L15,28.3680486 L27.5,23.0109058 L27.5,6.98909424 L15,1.63195138 L2.5,6.98909424 Z M1.30304035,5.87012556 L14.8030404,0.0844112783 C14.9288147,0.0305079649 15.0711853,0.0305079649 15.1969596,0.0844112783 L28.6969596,5.87012556 C28.8808016,5.94891496 29,6.12968402 29,6.32969808 L29,23.6703019 C29,23.870316 28.8808016,24.051085 28.6969596,24.1298744 L15.1969596,29.9155887 C15.0711853,29.969492 14.9288147,29.969492 14.8030404,29.9155887 L1.30304035,24.1298744 C1.11919843,24.051085 1,23.870316 1,23.6703019 L1,6.32969808 C1,6.12968402 1.11919843,5.94891496 1.30304035,5.87012556 Z" fill="#99A2AA" fill-rule="nonzero"></path>
+                        <polygon id="ParcelIconPath-2" fill="#99A2AA" fill-rule="nonzero" points="14.25 12 15.75 12 15.75 29 14.25 29"></polygon>
+                    </g>
+                </svg>
+                    Оформити</button>
+                </div>
+                <div>
+                    <button class="d-flex gap-2 svg-cont button icon-link-hover-3 align-items-center">
+                            <svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <g>
+                                        <circle id="target-icon" cx="15" cy="15" r="12" stroke="#99A2AA" stroke-width="1.5"></circle>
+                                        <circle id="target-icon" cx="15" cy="15" r="7" stroke="#99A2AA" stroke-width="1.5"></circle>
+                                        <circle id="target-icon-with-fill" cx="15" cy="15" r="6" fill="#FFFFFF"></circle>
+                                        <circle id="target-icon" cx="15" cy="15" r="2" stroke="#99A2AA" stroke-width="1.5"></circle>
+                                    </g>
+                                </g>
+                            </svg>    
+                    Знайти індекс</button>
+                </div>
+                <div>
+                    <button class="d-flex gap-2 svg-cont button icon-link-hover align-items-center">
+                    <svg id="SubscribeIconSvg"  width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <defs>
+                                    <clipPath id="subscribe-clip-path-1">
+                                        <path class="cls-1" d="M14.29,26.13V5.82L24.42,2.1a.76.76,0,0,1,.27-.05.85.85,0,0,1,.83.86V23a.85.85,0,0,1-.63.83L14.37,26.56C14.3,26.58,14.35,26.13,14.29,26.13Z" clip-rule="evenodd" fill="none"></path>
+                                    </clipPath>
+                                    <clipPath id="subscribe-clip-path-2">
+                                        <rect class="cls-2" x="-1.61" y="-1.61" width="33.21" height="33.21" fill="none"></rect>
+                                    </clipPath>
+                                    <clipPath id="subscribe-clip-path-3">
+                                        <path class="cls-1" d="M15.84,26.31c-.07,0-.14.27-.21.25L5.11,23.8A.85.85,0,0,1,4.48,23V2.91a.85.85,0,0,1,.83-.86.76.76,0,0,1,.27.05L16.11,5.85" clip-rule="evenodd" fill="none"></path>
+                                    </clipPath>
+                                    <clipPath id="subscribe-clip-path-5">
+                                        <path class="cls-1" d="M14.93,26.54l14.16-.76a.88.88,0,0,0,.85-.85v-19a.87.87,0,0,0-.9-.85H29l-3.74.2M13.89,26.59H14" clip-rule="evenodd" fill="none"></path>
+                                    </clipPath>
+                                    <clipPath id="subscribe-clip-path-7">
+                                        <path class="cls-1" d="M15,26.49.91,25.73a.88.88,0,0,1-.85-.85v-19A.87.87,0,0,1,1,5H1l3.74.2m11.35,21.3h-.06" clip-rule="evenodd" fill="none"></path>
+                                    </clipPath>
+                                </defs>
+                                <polygon id="SubscribeIconPolygon-1" points="25.27 6.48 28.59 6.48 28.59 24.66 21.27 24.78 25.18 23.3 25.27 6.48" fill="#ffffff"></polygon>
+                                <polygon id="SubscribeIconPolygon-2" points="1.47 6.48 4.48 6.62 4.54 23.28 8.39 24.66 1.47 24.39 1.47 6.48" fill="#ffffff"></polygon>
+                                <g clip-path="url(#subscribe-clip-path-1)">
+                                    <g clip-path="url(#subscribe-clip-path-2)">
+                                        <path id="SubscribeIconElement-1" d="M14.16,26.59,13.89,5.85,24.41,2.1a.87.87,0,0,1,.28-.05.85.85,0,0,1,.83.86V23a.85.85,0,0,1-.63.83L14.37,26.57Z" stroke="#99A2AA" stroke-width="3px" fill="none" stroke-miterlimit="10"></path>
+                                    </g>
+                                </g>
+                                <g clip-path="url(#subscribe-clip-path-3)">
+                                    <g clip-path="url(#subscribe-clip-path-2)">
+                                        <path id="SubscribeIconElement-2" d="M15.84,26.59l-.21,0L5.11,23.8A.85.85,0,0,1,4.48,23V2.91a.85.85,0,0,1,.83-.86.87.87,0,0,1,.28.05L16.11,5.85" stroke="#99A2AA" stroke-width="3px" fill="none" stroke-miterlimit="10"></path>
+                                    </g>
+                                </g>
+                                <g clip-path="url(#subscribe-clip-path-5)">
+                                    <g clip-path="url(#subscribe-clip-path-2)">
+                                        <path id="SubscribeIconElement-3" d="M14.93,26.54l14.16-.76a.88.88,0,0,0,.85-.85v-19a.87.87,0,0,0-.9-.85H29l-3.74.2M13.89,26.59h0" stroke="#99A2AA" stroke-width="3px" stroke-linejoin="round" stroke-linecap="round" fill="none"></path>
+                                    </g>
+                                </g>
+                                <g clip-path="url(#subscribe-clip-path-7)">
+                                    <g clip-path="url(#subscribe-clip-path-2)">
+                                        <path id="SubscribeIconElement-4" d="M15,26.49.91,25.73a.88.88,0,0,1-.85-.85v-19A.87.87,0,0,1,1,5H1l3.74.2m11.35,21.3h-.05" stroke="#99A2AA" stroke-width="3px" stroke-linejoin="round" stroke-linecap="round" fill="none"></path>
+                                    </g>
+                                </g>
+                                <g clip-path="url(#subscribe-clip-path-2)">
+                                    <line id="SubscribeIconElement-5" x1="15.04" y1="6.71" x2="15.04" y2="26.59" stroke="#99A2AA" stroke-width="1.5px" stroke-linecap="round" fill="none" stroke-miterlimit="10"></line>
+                                </g>
+                            </svg>     
+                    Передплатити</button>
+                </div>
+            </div>
+            <footer class="p-6" style="color:white">
+                <div class="w-12">
+                Всі права захищені. Використання матеріалів даного сайту можливе тільки з посиланням на джерело.
+                </div>
+            </footer>
         </div>
-
+            
     </body>
 </html>
